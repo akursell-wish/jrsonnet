@@ -97,6 +97,9 @@ pub enum BinaryOpType {
 	Mul,
 	Div,
 
+	/// Implemented as intrinsic, put here for completeness
+	Mod,
+
 	Add,
 	Sub,
 
@@ -124,6 +127,7 @@ impl Display for BinaryOpType {
 			match self {
 				Mul => "*",
 				Div => "/",
+				Mod => "%",
 				Add => "+",
 				Sub => "-",
 				Lhs => "<<",
